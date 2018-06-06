@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      Sign In
+    </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119548310-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119548310-1');
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src='https://apis.google.com/js/platform.js' async defer> </script> -->
+    <link rel='stylesheet' href='signInStyle.css'>
+  </head>
+
+  <body>
+
+
+    <div id='container'>
+
+      <div id='infoContainer'>
+
+      <input id="txtEmail" type="email" placeholder="Email"> <br/>
+
+      <input id="txtPassword" type="password" placeholder="Password"> <br/>
+
+      <!-- <a href='/Users/akore128/Desktop/Workspace/LINK/Explore/explore.html'> -->
+      <div id='buttonContainer'>
+          <button id='login' class='btn'>
+          Login
+          </button>
+          <!-- </a> -->
+
+          <button id='logout' class='btn hide'>
+            Logout
+          </button>
+
+
+          <p id='or' class=''>----or----</p>
+
+          <button id='signUp' class='btn' onClick="enroll()">
+            Sign up
+          </button>
+
+        </div>
+
+        </div>
+
+      </div>
+
+    <script src='signIn.js' click='signIn()'></script>
+  </body>
+
+</html>

@@ -1,0 +1,70 @@
+body{
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}
+
+.hide{
+  display: none;
+}
+
+.btn{
+  border: orange 2px solid;
+  width:100px;
+  height: 30px;
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: orange;
+  color: white;
+}
+
+#infoContainer{
+  padding-top:100px;
+  width: 205px;
+  margin:0 auto;
+  background-color:white;
+}
+
+#buttonContainer{
+  display:inline;
+  margin-left: 2px;
+  background-color: white;
+
+}
+
+#error{
+  color:red;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#container{
+  background-color: white;
+  display: absolute;
+  border:orange 3px solid;
+  border-radius: 2%;
+  text-align: center;
+  /* padding-top: 300px; */
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  font-family: arial;
+}
+
+#signUp{
+  margin-top: -20px;
+  margin-left: 2px;
+}
+
+
+input{
+  margin-top:20px;
+  width: 205px;
+  height: 30px;
+  display: hide;
+  border: none;
+  border-bottom: solid 2px orange;
+  font-size: 14px;
+}

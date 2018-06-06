@@ -1,0 +1,136 @@
+body{
+  overflow-y: scroll;
+  background-color: orange;
+}
+
+#backgroundImage{
+  width:75%;
+  min-width: 75%;
+  height:75%;
+  min-height: 75%;
+  margin-top: 6%;
+  margin-left: 12%;
+  position:absolute;
+  border-color:white 2px solid;
+  /* background-color: blue; */
+}
+
+hr{
+  border-color: transparent;
+}
+
+.hide{
+  display: none;
+}
+
+#containerBackground{
+  position: absolute;
+  width: 400px;
+  height: 603px;
+  margin-left:33%;
+  border-color:white 2px solid;
+}
+
+#formContainer{
+  position: absolute;
+  width: 400px;
+  height: 603px;
+  /* margin-top: -30px; */
+  margin-left:33%;
+  margin-top: -60px;
+  font-family: arial;
+  border-color:white 2px solid;
+}
+
+h1 {
+  margin-left: 25px;
+  font-size: 45px;
+  color: white;
+}
+
+/* .formTwo{
+  border:white 2px solid;
+  color:white;
+  width: 340px;
+} */
+
+::placeholder{
+  color:white;
+}
+
+#cover{
+  width:81px;
+}
+
+.form{
+  padding-left: 10px;
+  border:white 2px solid;
+  color: white;
+  font-weight:bold;
+  font-size:15px;
+  margin-top:5px;
+  width:345px;
+  height: 50px;
+  outline:none;
+  outline-color:orange;
+  background-color: orange;
+}
+
+#grade{
+  width:360px;
+}
+
+#school{
+  width: 360px;
+}
+
+.opt {
+  font-weight:bold;
+  font-size:14px;
+  margin-top:30px;
+  margin-left:25px;
+}
+
+.opt:hover{
+  color:orange;
+  font-weight: bold;
+}
+
+#bio{
+  min-width: 345px;
+  max-width: 345px;
+  color:white;
+  background-color: orange;
+  outline:none;
+  font-size: 15px;
+  font-weight: bold;
+  border:white 2px solid;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.send{
+  font-weight:bold;
+  font-size: 15px;
+
+  text-align: center;
+  background-color: orange;
+  margin-left: 280px;
+  margin-top: 5px;
+  height:30px;
+  width: 100px;
+  border:white 2px solid;
+
+  text-decoration: none;
+  color:white;
+}
+
+#incomplete{
+  position:absolute;
+  margin-left: 24px;
+  margin-top: -32px;
+  color:red;
+  font-size:25px;
+  font-weight: bold;
+  width: 345px;
+}

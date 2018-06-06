@@ -1,0 +1,68 @@
+<!DOCTYPE: html>
+<html>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119548310-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119548310-1');
+    </script>
+    <!-- connects to style.css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <link rel="stylesheet" href = "profileStyle.css">
+    <title class="title">Profile</title>
+  </head>
+
+<body id='body'>
+    <!-- connects to main.js -->
+    <script src='profile.js'></script>
+
+      <!-- navBar -->
+      <nav>
+        <!-- Logo here -->
+        <div id='logo'>
+
+        </div>
+        <!-- search box  here -->
+        <form>
+            <input id= 'search' type='search' name ='search' placeholder = 'Search...'/>
+            <input id= 'submit' type='image' name='submit' value='submit' src='Icons/search.png'/>
+        </form>
+        <!-- nav options listed here -->
+        <table id='navButtons'>
+          <tr>
+            <td class="navCell">
+              <a href="/Users/akore128/Desktop/Workspace/LINK/Explore/explore.html">
+              Explore
+            </a>
+            </td>
+            <td class="navCell">
+              <a href="/Users/akore128/Desktop/Workspace/LINK/createProject/create.html">
+              Create
+              </a>
+            </td>
+            <td class="navCell">
+              Notifications
+            </td>
+            <td class="navCell">
+              ...
+            </td>
+            <td class="navCell" alt='Tell us your ideas!'>
+              Ideas
+            </td>
+            <td class="navCell">
+              Settings
+            </td>
+            <td>
+            </td>
+          </tr>
+        </table>
+      </nav>
+
+    </body>
+</html>

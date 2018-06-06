@@ -1,0 +1,564 @@
+* {
+box-sizing: border-box;
+margin: 0px;
+font-family:arial;
+}
+
+
+body{
+  width:100%;
+  height: 100%;
+}
+
+nav{
+  position: sticky;
+  display:block;
+  height: 70px;
+  width: 100%;
+  background-color: #ffbb02;
+  box-shadow: 0px 1px 5px grey;
+  z-index: 3;
+}
+
+form{
+  padding-top: 13px;
+  padding-left: 10%;
+}
+
+input:focus{
+outline:none;
+}
+
+input#search{
+ position:relative;
+ z-index:2;
+ border:none;
+ border-radius: 10px;
+ height: 35px;
+ min-height: 25px;
+ width: 20%;
+ min-width: 100px;
+ padding-left: 30px;
+ font-size: 14px;
+ font-family: arial;
+ font-weight: lighter;
+}
+
+ #submit{
+  border-left: solid 1.5px grey;
+  padding-left: 15px;
+  z-index: 3;
+  position:absolute;
+  margin-left: -47px;
+  margin-top: 6px;
+  width: 35px;
+  height: 20px;
+}
+
+#logo{
+  margin-left: 90px;
+  margin-top:13px;
+  vertical-align: middle;
+  height:35px;
+  width:35px;
+  background-color: grey;
+  float: left;
+}
+
+#Logo:hover{
+  opacity:.7;
+}
+
+#navButtons{
+  z-index:2;
+  position: absolute;;
+  display:inline-block;
+  width:100%;
+  height: 9%;
+  margin-left: 500px;
+  margin-top:-45px;
+  padding-left:25%;
+  font-size: 14px;
+  weight: bold;
+
+}
+
+.navCell{
+  width: 16.5%;
+  padding-top: 8%;
+  height:100%;
+  text-align: center;
+  margin-top:70%;
+  color:white;
+}
+
+.navCell a{
+  color:inherit;
+  text-decoration: none;
+}
+
+.navCell:hover{
+  background-color: #ffd901;
+  border-bottom: 3px solid white;
+}
+
+#imgTitle{
+  margin-top: 10px;
+  margin-left: 424px;
+  width: 600px;
+}
+
+.hide{
+  display: none;
+}
+
+.button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+#cover{
+  width: 300px;
+  height: 240px;
+
+}
+
+#title{
+  font-size: 30px;
+  font-weight:bold;
+  width:300px;
+  border:black 2px solid;
+  text-align:center;
+}
+
+#title td{
+  background-color:lightgrey;
+  font-size:18px;
+  text-align:center;
+  width: 300px;
+ }
+
+ #description{
+   margin-top:10px;
+   margin-left:424px;
+   width: 600px;
+   font-family:arial;
+ }
+
+ #description h1{
+   font-size:20px;
+   font-weight:bold;
+   padding-top: 10px;
+ }
+
+ #textBox{
+   margin-top:10px;
+   margin-right:20px;
+   min-height: 50px;
+   max-height: 225px;
+   width: 600px;
+   overflow-y: scroll;
+   border: black solid 2px;
+   font-size: 18px;
+   font-weight:normal;
+ }
+
+ #textBox p {
+   margin-left:20px;
+   margin-right:20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+
+.info{
+  border:2px black solid;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 424px;
+  width: 600px;
+  height: 225px;
+
+}
+
+#profile{
+  border:black 2px solid;
+  background-color: grey;
+  border-radius: 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 125px;
+  height: 125px;
+}
+
+.infoContainer{
+  /* border:2px black solid; */
+  font-size:16px;
+  font-family:arial;
+  margin-left: 205px;
+  margin-top: -125px;
+  width: 350px;
+  height: 150px;
+}
+
+.link{
+  vertical-align: text-top;
+  width:325;
+  /* border:black solid 2px; */
+  font-weight: bold;
+}
+
+.linkB{
+  vertical-align: text-top;
+  /* border:black solid 2px; */
+  font-weight: bold;
+  width: 50px;
+}
+
+#infoTwo{
+ position: absolute;
+ max-width: 400px;
+ margin-left: 204px;
+ margin-top: -20px;
+ font-weight: bold;
+}
+
+
+#time{
+  padding-top: 25px;
+  width: 302;
+  display: inline-block;
+}
+
+#time div{
+  padding-left: 15px;
+  display: inline-block;
+  width: 250px;
+  /* border: black 2px solid; */
+}
+
+#commentSection{
+  height: 713px;
+  width: 376px;
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 25px;
+}
+
+#comment{
+  min-height: 200px;
+  height: 200px;
+  max-height: 300px;
+  min-width: 345px;
+  max-width: 345px;
+  border: black 2px solid;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 13px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background: none;
+}
+
+#pushComment{
+  background-color: black;
+  width: 345px;
+  height: 35px;
+  margin-left: 13px;
+  margin-top: -35px;
+}
+
+#post{
+  width: 98px;
+  height: 33px;
+  background-color: orange;
+  opacity: 1;
+  font-size: 16px;
+  color: white;
+  margin-top: 0px;
+  margin-left: 245px;
+  border: none;
+}
+
+.canPost{
+  opacity: 1;
+}
+
+.followed{
+  color: darkgrey;
+}
+
+#commentContainer{
+  /* border:black solid 2px; */
+  margin-left: 13px;
+  height: 500px;
+  width: 345px;
+  overflow: scroll;
+}
+
+/* These all style the individual comment, ie. user prof, and outside box, inside string */
+#viewComments{
+
+  width: 345px;
+  border: black solid 2px;
+  margin-top: 10px;
+  background-color: orange;
+}
+
+#profileComment{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: grey;
+  border:black solid 2px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#displayComment{
+  width: 252px;
+  min-height: 37px;
+  margin-left: 65px;
+  margin-top: -50px;
+  margin-bottom: 18px;
+  color:white;
+}
+
+#commentMenu{
+  border: black solid 2px;
+  position: absolute;
+  margin-left: 310px;
+  margin-top: -15px;
+  width: 20px;
+  height: 16px;
+  font-size: 33px;
+  font-weight: bold;
+  color: grey;
+}
+
+#membersContainer{
+  /* border: black solid 2px; */
+  width:376px;
+  /* height: 300px; */
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 1047px;
+}
+
+#searchMembers{
+  border: black solid 2px;
+  background-color: #fafafa;
+  border-radius: 3px;
+  height: 40px;
+  width: 345px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-left: 17px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-family: arial;
+}
+
+#memberQueryContainer{
+  width:345px;
+  margin-left: 17px;
+  /* margin-bottom: 10px; */
+  border-radius: 3px;
+}
+
+#selectQueryMember{
+  border: black solid 2px;
+  width: 345px;
+  border: none;
+  max-height: 70px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.queryMemberResults{
+  list-style-type: none;
+  border: black solid 2px;
+  margin-top: 5px;
+  padding: 5px;
+  color: black;
+}
+
+.queryMemberResults :hover{
+  font-weight: bold;
+}
+
+#pushMember{
+  border: black 2px solid;
+  margin-top: -125px;
+  margin-left: 282;
+  background-color: #5a8bed;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+#skills{
+  width: 376px;
+  position: absolute;
+  margin-left: 5px;
+}
+
+#skills h1{
+  margin-top: 18px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#skills div{
+  max-height: 165px;
+  width: 345px;
+  margin-left: 13px;
+  margin-bottom: 10px;
+  border: black solid 2px;
+}
+
+#skillsContainer{
+  overflow-y: scroll;
+}
+
+.listStyle{
+  list-style-type: none;
+  margin-top: 10px;
+  margin-left: -20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: coral;
+}
+
+#user_time{
+  width: 275px;
+  height: 15px;
+  font-size: 12px;
+  margin-left: 65px;
+}
+
+#formButtonContainer{
+  /* border: black solid 2px; */
+  width:376px;
+  position: absolute;
+  /* margin-top: 10px; */
+  /* margin-left: 1047px; */
+}
+
+#formButton{
+  width: 345px;
+  height: 40px;
+  margin-left: 17px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: orange;
+  color: white;
+  border:black solid 2px;
+}
+
+#formContainer{
+  /* border: black solid 2px; */
+  margin-left: -1px;
+  width:376px;
+  min-height: 0px;
+  max-height: 180px;
+  padding-bottom: 10px;
+  overflow-y: scroll;
+}
+
+/* container for displaying links */
+#displayForm{
+  margin-top: 5px;
+  margin-left: 17px;
+  height: 75px;
+  width: 345px;
+  border: black solid 2px;
+}
+
+#displayForm p{
+  font-size: 20px;
+}
+
+#displayForm a{
+  color: orange;
+  cursor: pointer;
+  font-size: 18px;
+  overflow-x: scroll;
+}
+
+.displayFormContent{
+  margin-top:10px;
+  margin-left:10px;
+  margin-right: 5px;
+  max-width: 340px;
+  overflow-x: scroll;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+#form{
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-left: 40px;
+  margin-left:475px;
+  border: black solid 2px;
+  border-radius: 5%;
+  box-shadow: 0px 0px 30px 10px #888888;
+  background-color: white;
+  font-size: 30px;
+}
+
+#submitForm{
+  width: 75px;
+  height: 40px;
+  font-size: 16px;
+  margin-top:70px;
+  margin-left: 325px;
+  padding-left: 3px;
+  position:absolute;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  font-weight: bold;
+}
+
+#exit{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -30px;
+  margin-top: -90px;
+  background-color: red;
+  border: red solid 2px;
+  border-radius: 100%;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+#exit p{
+  margin-left: 3px;
+  margin-top: -4px;
+}
+
+.input{
+  position: absolute;
+  display:inline;
+  height: 40px;
+  width: 400px;
+  padding-left: 5px;
+  font-size: 20px;
+  border: black solid 2px;
+  color: black;
+}

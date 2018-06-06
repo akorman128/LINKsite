@@ -1,0 +1,200 @@
+* {
+box-sizing: border-box;
+margin: 0px;
+font-family:arial;
+}
+
+
+body{
+  width:100%;
+  height: 100%;
+}
+
+nav{
+  position: sticky;
+  display:block;
+  height: 70px;
+  width: 100%;
+  background-color: #ffbb02;
+  box-shadow: 0px 1px 5px grey;
+  z-index: 3;
+}
+
+form{
+  padding-top: 13px;
+  padding-left: 10%;
+}
+
+input:focus{
+outline:none;
+}
+
+input#search{
+ position:relative;
+ z-index:2;
+ border:none;
+ border-radius: 10px;
+ height: 35px;
+ min-height: 25px;
+ width: 20%;
+ min-width: 100px;
+ padding-left: 30px;
+ font-size: 14px;
+ font-family: arial;
+ font-weight: lighter;
+}
+
+ #submit{
+  border-left: solid 1.5px grey;
+  padding-left: 15px;
+  z-index: 3;
+  position:absolute;
+  margin-left: -47px;
+  margin-top: 6px;
+  width: 35px;
+  height: 20px;
+}
+
+#logo{
+  margin-left: 90px;
+  margin-top:13px;
+  vertical-align: middle;
+  height:35px;
+  width:35px;
+  background-color: grey;
+  float: left;
+}
+
+#Logo:hover{
+  opacity:.7;
+}
+
+#navButtons{
+  z-index:2;
+  position: absolute;;
+  display:inline-block;
+  width:100%;
+  height: 9%;
+  margin-left: 500px;
+  margin-top:-45px;
+  padding-left:25%;
+  font-size: 14px;
+  weight: bold;
+
+}
+
+.navCell{
+  width: 16.5%;
+  padding-top: 8%;
+  height:100%;
+  text-align: center;
+  margin-top:70%;
+  color:white;
+}
+
+.navCell a{
+  color:inherit;
+  text-decoration: none;
+}
+
+.navCell:hover{
+  background-color: #ffd901;
+  border-bottom: 3px solid white;
+}
+
+.info{
+  border:2px black solid;
+  font-size:16px;
+  font-family:arial;
+  margin-left: 424px;
+  margin-top: 12.5px;
+  width: 600px;
+  height: 130px;
+}
+
+#profile{
+  background-color: lightgrey;
+  border:black solid 2px;
+  border-radius:100%;
+  margin-top: 15px;
+  margin-left: 25px;
+  width: 100px;
+  height: 100px;
+}
+
+#infoContainer{
+  margin-left: 145px;
+  margin-top: -5px;
+}
+
+.cellOne{
+  font-size:18px;
+  font-weight:bold;
+  width:150px;
+  height: 50px;
+  max-width:100%;
+  white-space:nowrap;
+  padding-left: 10px;
+}
+
+.cellTwo{
+  padding-left: 40px;
+  font-weight:bold;
+  font-size:18px;
+  text-align: center;
+}
+
+.title{
+  margin-top: 5px;
+  margin-bottom:5px;
+  margin-left: 424px;
+  font-size: 30px;
+  font-weight:bold;
+  text-decoration: underline;
+}
+
+.projectHolder{
+  background-color:lightgrey;
+  border:black solid 2px;
+  margin-left: 424;
+  height: 245px;
+  width: 600px;
+  overflow-x: scroll;
+
+}
+
+.projectHolder table{
+  margin-top: 9.5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  overflow-x: scroll;
+
+}
+
+.project{
+  vertical-align: text-top;
+  overflow-y: scroll;
+  background-color: white;
+  border: black solid 4px;
+  height: 218px;
+  max-width: 220px;
+  min-width: 220px;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  /* margin-bottom: 15px; */
+}
+
+a:hover{
+  color: orange;
+}
+
+hr{
+  margin-bottom: 10px;
+  color: black
+}
