@@ -1,0 +1,233 @@
+<!DOCTYPE  html>
+<html>
+  <head>
+    <title>Create Project </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119548310-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119548310-1');
+    </script>
+    <!-- put jquery and firbase in header-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <link href="../createProject/multiple-select-master/multiple-select.css" rel="stylesheet"/>
+    <link rel="stylesheet" href = "createStyle.css">
+  </head>
+  <body>
+    <!-- connects to the .js -->
+    <script src='createMain.js'></script>
+    <script src="../createProject/multiple-select-master/multiple-select.js"></script>
+
+
+<!-- backgroundImage -->
+      <div id='containerBackground'></div>
+      <div id='formContainer'>
+        <h1>Create Your Project</h1>
+        <p class= 'opt'>
+        Cover Photo
+        <input type="file" id='cover'>
+        </p>
+         <p class= 'opt'>
+           <input type='text' id='title' placeholder="Title">
+         </p>
+         <p class= 'opt'>
+           Project Location <br/>
+           <select  required='required' size='1' class='form' id='location'>
+             <!-- <option selected disabled hidden>Borough</option> -->
+             <option selected>...</option>
+             <option>
+            &ensp;   Brooklyn
+             </option>
+             <option>
+          &ensp;     Bronx
+             </option>
+             <option>
+              &ensp; Manhattan
+             </option>
+             <option>
+             &ensp;   Queens
+             </option>
+             <option>
+              &ensp; Staten Island
+             </option>
+           </select>
+         </p>
+
+         <p class= 'opt' id='type'>
+           Project Type <br/>
+           <select  multiple required='required' size='1' class='form' id='tag'>
+             <option selected>...</option>
+             <option>
+               Art
+             </option>
+             <option>
+               Entrepreneurship
+             </option>
+             <option>
+               Organizational
+             </option>
+             <option>
+               Philanthropy
+             </option>
+             <option>
+               Technology
+             </option>
+           </select>
+         </p>
+
+         <p class= 'opt' >
+           Availability <br/>
+           <select multiple required='required' size='1' class='form' id='availability'>
+             <option selected>...</option>
+             <option>
+              &ensp; Weekdays
+             </options>
+             <option>
+            &ensp;   Weekends
+             </options>
+             <option>
+              &ensp; Mondays
+             </option>
+             <option>
+              &ensp; Tuesdays
+             </option>
+             <option>
+            &ensp;   Wednesdays
+             </option>
+             <option>
+              &ensp; Thursdays
+             </option>
+             <option>
+              &ensp; Fridays
+             </option>
+             <option>
+            &ensp;   Saturdays
+             </options>
+             <option>
+              &ensp; Sundays
+             </options>
+           </select>
+         </p>
+         <p class= 'opt'>
+           Skills Needed <br/>
+           <select multiple required='required' size='1' class='form' id='skills'>
+             <option selected>...</option>
+             <option>
+             Drawing
+             </option>
+             <option>
+             Painting
+             </options>
+             <option>
+             Graphic Design
+             </options>
+             <option>
+             Writing
+           </option>
+           <option>
+             Copy
+           </option>
+             <option>
+             Filming
+             </option>
+             <option>
+             Producing
+             </option>
+             <option>
+             Theater
+             </option>
+             <option>
+             Singing
+             </option>
+             <option>
+             Acting
+             </option>
+             <option>
+             Instrumentalist
+             </option>
+             <option>
+             Music Production
+             </options>
+             <option>
+             Video Editing
+             </options>
+             <option>
+             HTML/CSS
+             </options>
+             <option>
+             JS
+             </option>
+             <option>
+             SQL/PHP
+             </option>
+             <option>
+             Java
+             </option>
+             <option>
+             Python
+             </option>
+             <option>
+             Processing
+             </option>
+             <option>
+             Matlab
+             </option>
+             <option>
+             Coding (Other)
+             </option>
+             <option>
+             Engineering
+             </options>
+             <option>
+             Biology
+             </option>
+             <option>
+             Physics
+             </option>
+             <option>
+             STEM
+             </options>
+             <option>
+             Organizor
+             </options>
+             <option>
+             Manager
+             </options>
+             <option>
+             Collaborator
+             </options>
+             <option>
+             Leader
+             </options>
+             <option>
+             Passionate
+             </options>
+             <option>
+             Creative
+             </options>
+             <option>
+             Curious
+             </options>
+           </select>
+         </p>
+         <p class= 'opt'>
+           <textarea rows="4" cols="47" id='description' placeholder="Description"></textarea>
+         </p>
+         <script>
+             $('select').multipleSelect();
+         </script>
+
+         <!--creates button, when clicked calls function submitProject()-->
+
+         <button id='send'>
+           Submit Project
+         </button>
+       </div>
+     </div>
+
+  </body>
+</html>

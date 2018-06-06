@@ -1,0 +1,272 @@
+<!DOCTYPE: html>
+<html>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119548310-1"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119548310-1');
+    </script>
+
+    <!-- connects to style.css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <link rel="stylesheet" href = "style.css">
+    <title> Explore </title>
+  </head>
+
+<body id="body">
+    <!-- connects to main.js -->
+    <script src='main.js'></script>
+
+      <!-- navBar -->
+      <nav>
+        <!-- Logo here -->
+        <div id='logo' class='hide'>
+
+        </div>
+        <!-- search box  here -->
+        <form>
+            <input id= 'search' placeholder = 'Search...'/>
+        </form>
+
+        <!--search bar-->
+        <script>
+
+            $('#search').keyup(function(){
+              var queryUpper = $('#search').val();
+              queryUpper = queryUpper.charAt(0).toUpperCase() + queryUpper.slice(1);
+              console.log(queryUpper)
+
+              var query = $('#search').val();
+              console.log(query)
+
+              if (query !== '' && query !== ' '){
+
+              $("#searchContainer").remove();
+
+              $('#search').after(
+                  "<div id='searchContainer'>"+
+                    "<p class='resultsHead'> Projects</p>"+
+                      "<table id='projectResultsContainer'></table>"+
+
+                    "<p class='resultsHead'>Profiles</p>"+
+                      "<table id='usersResultsContainer'></table>"+
+                  "</div>" );
+
+                  $('#projectResultsContainer').empty()
+                  const rootRefTwo = database.ref('projects').orderByChild('title').startAt(query).endAt(query+'\uf8ff').limitToFirst(5).once("value", function(snapshot){
+                    var queryResults = snapshot.val()
+
+                    for (var x in queryResults){
+
+                      $('#projectResultsContainer').append(
+                          "<tr>"+
+                            "<td id='projectList' class='queryResults'>"+
+                            "<a href = "+ 'http://swipe.riverdale.edu/link/LINK/viewProject/viewProject.html?key=' + x +">"+
+                              queryResults[x]['title'] +"</td>"+
+                            "</a>"+
+                          "</tr>"
+                      );
+                    }
+                  });
+                  $('#usersResultsContainer').empty()
+                  const rootRefThree = database.ref('users').orderByChild('name').startAt(query).endAt(query+'\uf8ff').limitToFirst(5).once("value", function(snapshot){
+                    var queryResultsUsers = snapshot.val()
+
+                      console.log(queryResultsUsers)
+                    for (var x in queryResultsUsers){
+                      $('#usersResultsContainer').append(
+                          "<tr>"+
+                            "<td id='userList' class='queryResults'>"+
+                                "<a href = " + 'http://swipe.riverdale.edu/link/LINK/Profile/profile.html?key='  + x + " >"+ queryResultsUsers[x]['name'] +" | "+ queryResultsUsers[x]['grade'] +" | "+ queryResultsUsers[x]['school']+"</a>"+
+                              "</td>"+
+                          "</tr>"
+                      );
+                      // $('#userList').wrap("<a href = "+ 'http://swipe.riverdale.edu/link/LINK/Profile/profile.html?key=' + x +"></a>")
+                    }
+                  });
+
+                  if(query.charAt(0) !== query.charAt(0).toUpperCase()) {
+
+
+                    const rootRefTwo = database.ref('projects').orderByChild('title').startAt(queryUpper).endAt(queryUpper+'\uf8ff').limitToFirst(5).once("value", function(snapshot){
+                      var queryResultsUpper = snapshot.val()
+
+                      for (var x in queryResultsUpper){
+
+                        $('#projectResultsContainer').append(
+                            "<tr>"+
+                              "<td id='projectList' class='queryResults'>"+
+                              "<a href = "+ 'http://swipe.riverdale.edu/link/LINK/viewProject/viewProject.html?key=' + x +">"+
+                                queryResultsUpper[x]['title'] +"</td>"+
+                              "</a>"+
+                            "</tr>"
+                        );
+                      }
+                    });
+                    $('#usersResultsContainer').empty()
+                    const rootRefThree = database.ref('users').orderByChild('name').startAt(queryUpper).endAt(queryUpper+'\uf8ff').limitToFirst(5).once("value", function(snapshot){
+                      var queryResultsUsersUpper = snapshot.val()
+
+                        console.log(queryResultsUsersUpper)
+                      for (var x in queryResultsUsersUpper){
+                        $('#usersResultsContainer').append(
+                            "<tr>"+
+                              "<td id='userList' class='queryResults'>"+
+                                  "<a href = " + 'http://swipe.riverdale.edu/link/LINK/Profile/profile.html?key='  + x + " >"+ queryResultsUsersUpper[x]['name'] +" | "+ queryResultsUsersUpper[x]['grade'] +" | "+ queryResultsUsersUpper[x]['school']+"</a>"+
+                                "</td>"+
+                            "</tr>"
+                        );
+                        // $('#userList').wrap("<a href = "+ 'http://swipe.riverdale.edu/link/LINK/Profile/profile.html?key=' + x +"></a>")
+                      }
+                    });
+                  }
+
+              } else{
+                $("#searchContainer").remove();
+              }
+
+          });
+
+        </script>
+
+        <!-- nav options listed here -->
+        <table id='navButtons'>
+          <tr>
+            <td class="navCell">
+              <a href="http://swipe.riverdale.edu/link/LINK/Explore/explore.html">
+              Explore
+              </a>
+            </td>
+            <td class="navCell">
+              <a href="http://swipe.riverdale.edu/link/LINK/createProject/create.html">
+              Create
+              </a>
+            </td>
+            <td class="navCell">
+              Notifications
+            </td>
+            <td class="navCell">
+              ...
+            </td>
+            <td class="navCell" alt='Tell us your ideas!'>
+              Ideas
+            </td>
+            <td class="navCell drop">
+              Settings
+              <div class='settings'>
+                <p id='logout' onclick='logout()'>Logout</p>
+              </div>
+            </td>
+
+
+
+            <td>
+            </td>
+          </tr>
+        </table>
+      </nav>
+
+
+<!-- Category -->
+      <div id="categoryContainer">
+        <table id="categoryTable">
+          <tr >
+            <td class= "categoryCell" id='all'>
+              <img src='Icons/earth.png'>
+              <p>ALL</p>
+            </td>
+            <td class= "categoryCell" id='arts'>
+              <img src='Icons/pencil.png'>
+              <p>Arts</p>
+            </td>
+            <td class= "categoryCell" id='entrepreneurship'>
+              <img src= 'Icons/briefcase.png'>
+              <p>Entrepreneurship</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class= "categoryCell" id='organizational'>
+              <img src='Icons/speaker.png'> </img>
+              <p>Organization</p>
+            </td>
+            <td class= "categoryCell" id='philanthropy'>
+              <img src= 'Icons/heart.png'> </img>
+              <p>Philanthropy</p>
+            </td>
+            <td class= "categoryCell" id='tech'>
+              <img src= 'Icons/circuit.png'></img>
+              <p>Tech</p>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+      </div>
+
+      <!-- <div id='leftPanel'>
+        <script> var user = firebase.auth().currentUser;
+        console.log(user)
+         </script>
+
+        <div id= 'profilePic'>
+        </div>
+
+        <div id='info'>
+          <p class='infoStyle'> <b>
+              <script>
+              const rootRef = firebase.database().ref()
+              //don't know how to get login's name
+              const oneRef = rootRef.child('users').child('1')
+
+              </script>
+           </b></p>
+          <p>
+            <script>user.school</script>
+            </p> <br/>
+          <hr/>
+
+          <div id='connects' class='infoStyle'>
+            <p> <b>Connections</b> </p>
+            <p> 240 </p>
+          </div>
+          <div id='followed' class='infoStyle'>
+            <p><b>Followed Projects</b><p>
+              <p> 11 </p>
+          </div>
+          <div id='History' class='infoStyle'>
+            <p> <b> History </b> </p>
+          </div>
+        </div>
+      </div> -->
+
+       <!-- <div id='rightPanel'>
+         <p> Trending... </p>
+         <table>
+           <tr>
+             <td>
+             </td>
+           </tr>
+            <td>
+            </td>
+           <tr>
+             <td>
+             </td>
+           </tr>
+
+           <tr>
+           </tr>
+         </table>
+       </div> -->
+
+      <div id="projectsContainer">
+      </div>
+
+    </body>
+</html>
